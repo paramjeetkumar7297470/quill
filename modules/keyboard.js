@@ -49,6 +49,11 @@ class Keyboard extends Module {
         this.handleDelete,
       );
     } else {
+	  this.addBinding(
+        { key: 'Backspace' },
+        { collapsed: true },
+        this.handleBackspace,
+      );
       this.addBinding(
         { key: 'Backspace' },
         { collapsed: true, prefix: /^.?$/ },
